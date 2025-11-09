@@ -30,7 +30,8 @@ Commands:
 
 list the running process         = frida-ps -Uai
 find frida server version        = frida-server --version
-Bypassing in frida using js      = frida -U -f com.twitter.android -l fridascript.js --no-paus
+Bypassing in frida using js      = frida -U -f com.twitter.android -l fridascript.js --no-pause
+
  
 
 
