@@ -35,8 +35,12 @@ Bypassing in frida using js      = frida -U -f com.twitter.android -l fridascrip
  -------
 Objection Commands: 
 
-Load the application = objection -g package_name explore
-To know to agent attached = ping
+Load the application         = objection -g package_name explore
+To disable SSL Pinning       = Android ssl pinning disable
+To know to agent attached    = ping
+To enable background screen  = android ui FLAG_SECURE false
+Disable root detection       = android root disable
+
 
 
 
