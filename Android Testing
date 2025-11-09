@@ -6,7 +6,8 @@ Step 3: pip install objection
 Step 4: pip install frida-tools
 Step 5: Install ADB ( https://developer.android.com/tools/releases/platform-tools ) add to environment variables
 Step 6: Download emulator ( Eg: Genymotion, Nox, Memu ) or use physical device
-Step 7: Download the frida server with exact version and move it to emulator and give permisson (chmod 777)
+Step 7: Download the frida server with exact version and move it to emulator and give permisson (chmod 777) (https://github.com/frida/frida/releases/)
+        Frida server must be downloaded based on the device architecture ( Find the device architecture using cmd : adb shell getprop ro.product.cpu.abi )
 Step 8: Start frida server (./frida_server)
 Step 9: adb shell ( To get mobile shell access in CLI )
 
@@ -15,6 +16,10 @@ Connection and Exploitation:
 
 Settings >> Developer optionsand >> debugging mode (enable)
 Android Debug Bridge. It’s an official Android tool for controlling and remotely debugging Android devices.
+Step 1: adb connect (mobile ip:5555) if it is running locally connect using 127.0.0.1:21503
+Step 2: adb devices
+Step 3: 
+
 
 
 
