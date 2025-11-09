@@ -35,17 +35,18 @@ Bypassing in frida using js      = frida -U -f com.twitter.android -l fridascrip
  -------
 Objection Commands: 
 
-Load the application         = objection -g package_name explore
-To disable SSL Pinning       = Android ssl pinning disable
-To know to agent attached    = ping
-To enable background screen  = android ui FLAG_SECURE false
-Disable root detection       = android root disable
-Enumerating Directories      = env
-To download the  file        = filesystem download (file_name) new name
-To read the downloaded file  = cat file_name
-To read directly             = ios plist cat credentials.plist
-To query the sqlite database = sqlite connect (pewpew.sqlite)
-To view data in DB           = sqlite execute query select * from data;
+Load the application           = objection -g package_name explore
+Running objection with script  = objection --gadget "com.application.id" explore --startup-script antiroot.js
+To disable SSL Pinning         = Android ssl pinning disable
+To know to agent attached      = ping
+To enable background screen    = android ui FLAG_SECURE false
+Disable root detection         = android root disable
+Enumerating Directories        = env
+To download the  file          = filesystem download (file_name) new name
+To read the downloaded file    = cat file_name
+To read directly               = ios plist cat credentials.plist
+To query the sqlite database   = sqlite connect (pewpew.sqlite)
+To view data in DB             = sqlite execute query select * from data;
 
 
 
