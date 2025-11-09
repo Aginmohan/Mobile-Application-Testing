@@ -6,10 +6,11 @@ Step 3: pip install objection
 Step 4: pip install frida-tools
 Step 5: Install ADB ( https://developer.android.com/tools/releases/platform-tools ) add to environment variables
 Step 6: Download emulator ( Eg: Genymotion, Nox, Memu ) or use physical device
-Step 7: Download the frida server with exact version and move it to emulator and give permisson (chmod 777) (https://github.com/frida/frida/releases/)
+Step 7: Download the frida server with exact version and move it to emulator (https://github.com/frida/frida/releases/)
         Frida server must be downloaded based on the device architecture ( Find the device architecture using cmd : adb shell getprop ro.product.cpu.abi )
         adb push <path_of_frida_server_folder><space></data/local/tmp>
-Step 8: Start frida server (./frida_server)
+        chmod 777 frida_server
+Step 8: Start frida server (./frida_server), (./frida_server & )
 Step 9: adb shell ( To get mobile shell access in CLI )
 Step 10: Pushing the Proxy’s Certificate :
          Name the certificate cer.cerand install it on the device in the same location as the frida-server.
@@ -22,6 +23,14 @@ Settings >> Developer optionsand >> debugging mode (enable)
 Android Debug Bridge. It’s an official Android tool for controlling and remotely debugging Android devices.
 Step 1: adb connect (mobile ip:5555) if it is running locally connect using 127.0.0.1:21503
 Step 2: adb devices or adb shell
+Step 3: Push the “fridascript.js” script into device ( adb push <path_to_fridascript.js_folder> /data/local/tmp )
+
+-------
+Commands: 
+
+list the running process         = frida-ps -Uai
+find frida server version        = frida-server --version
+Bypassing in frida using js      = frida -U -f com.twitter.android -l fridascript.js --no-paus
  
 
 
