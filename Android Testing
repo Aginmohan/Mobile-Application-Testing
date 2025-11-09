@@ -30,9 +30,14 @@ Commands:
 
 list the running process         = frida-ps -Uai
 find frida server version        = frida-server --version
-Bypassing in frida using js      = frida -U -f com.twitter.android -l fridascript.js --no-pause
+Bypassing in frida using js      = frida -U -f com.twitter.android -l fridascript.js --no-pause  ( https://gist.github.com/cubehouse/56797147b5cb22768b500f25d3888a22 )
 
- 
+ -------
+Objection Commands: 
+
+Load the application = objection -g package_name explore
+To know to agent attached = ping
+
 
 
 
