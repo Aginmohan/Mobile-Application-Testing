@@ -4,3 +4,24 @@ Step 1: ( winget install Python.Python.3 ), ( sudo apt install python3 -y )
 Step 2: pip install frida==(version)
 Step 3: pip install objection
 Step 4: pip install frida-tools
+Step 5: Download the frida server with exact version and move it to device (https://github.com/frida/frida/releases/)
+        scp frida-server-<version>-iphoneos-arm64 root@<device_ip>:/usr/sbin/frida-server
+        chmod 755 /usr/sbin/frida-serve
+        ssh root@<device_ip>  
+Step 6: Pushing the Proxy’s Certificate :
+         Name the certificate cer.cerand install it on the device in the same location as the frida-server.
+         db push <path to cer.cer> /data/local/tmp/cert-der.crt
+
+--------
+Tools
+
+Ghidra               = static
+Mobsf                = Static/ dynamic
+open ssh             = connect to mobile
+frida script runner  = to do ssl pinning and jailbreak
+3utool               =  to install apps
+http screen mirror   = to mirror the mobile screen
+Putty                = To connect to mobile SSH
+Burp                 = Dynamic
+----------
+
